@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principal</title>
+    <link rel="stylesheet" href="~/PrincipalEstilo.css" />
+    <link rel="stylesheet" href="~/Canciones.css" />
+    <link rel="stylesheet" href="~/Biografia.css" />
+    <link rel="stylesheet" href="~/Discografia.css" />
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="~/images/compact-disc-with-glare.png" alt="" />
+            <a href="~/Home/Index">GrooveHub</a>
+        </section>
+        <nav class="menu">
+            <ul>
+                <li><a href="~/Home/Index" class="inicio">Inicio</a></li>
+                <li><a href="~/Home/Biografia">Biografia</a></li>
+                <li><a href="~/Home/Discografia">Discografia</a></li>
+                <li><a href="#">Apariciones en tv</a></li>
+                <li><a href="#">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="VistaPrincipal">
+        @RenderBody()
+    </main>
+    <footer></footer>
+</body>
+</html>

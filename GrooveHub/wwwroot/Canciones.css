@@ -1,0 +1,38 @@
+.canciones {
+  background-color: #001b79;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.canciones ul {
+  list-style: none;
+  margin: 15px;
+  padding: 0;
+}
+
+.canciones ul li {
+  display: flex;
+  background-color: black;
+  margin-bottom: 10px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.canciones ul li section {
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.canciones ul li label {
+  margin: 120px;
+  font-size: 19px;
+  height: auto;
+  color: white;
+}
+.canciones ul li img {
+  height: 90px;
+  width: 90px;
+  margin: 10px;
+}

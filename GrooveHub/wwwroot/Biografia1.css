@@ -1,7 +1,7 @@
-main > img {
+.VistaBio img {
   margin: auto;
-  height: 100%;
   opacity: 0.3;
+  width: 100%;
 }
 
 .texto {
@@ -9,6 +9,13 @@ main > img {
   width: 60%;
   margin: 50px;
   text-align: justify;
+}
+
+.VistaBio {
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
 }
 
 .bio {
@@ -19,8 +26,7 @@ main > img {
 }
 
 .foto {
-  background-image: url(images/Performing.jpg);
-  background-color: red;
+  background-image: url(images/shakira.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   /* height: 160%; */
@@ -32,11 +38,4 @@ main > img {
   height: 450px;
   margin-right: 5px;
   box-shadow: -10px 15px 10px black;
-}
-
-.VistaBio {
-  align-items: center;
-  background-color: #001b79;
-  width: 80%;
-  display: flex;
 }

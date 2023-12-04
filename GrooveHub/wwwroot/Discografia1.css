@@ -1,5 +1,10 @@
+.VistaAlbums {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 .lista {
-  /* display: flex; */
   display: block;
   flex-wrap: wrap;
   overflow: hidden;
@@ -13,15 +18,10 @@
   padding: auto;
   margin: auto;
   list-style: none;
-  /* display: flex;
-  flex-wrap: wrap;
-  position: relative; */
-  /* display: block; */
   text-align: center;
 }
 
 .lista li {
-  /* width: 150px; */
   width: 260px;
   float: left;
   margin: 0 18px 18px 0;
@@ -33,8 +33,6 @@
 }
 
 .lista li a {
-  /* display: flex;
-  flex-direction: column; */
   display: block;
   text-align: center;
   margin: auto;
@@ -57,16 +55,8 @@
   border-radius: 15px;
 }
 
-.VistaAlbums {
-  background-color: #001b79;
-  width: 80%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 .lista a:hover {
   font-weight: bold;
-  /* backdrop-filter: blur(5px); */
 }
 
 .lista li a:hover img {

@@ -1,7 +1,7 @@
 .canciones {
-  background-color: #001b79;
   width: 100%;
   overflow: hidden;
+  height: 100%;
   overflow-y: scroll;
 }
 
@@ -31,6 +31,7 @@
   height: auto;
   color: white;
 }
+
 .canciones ul li img {
   height: 90px;
   width: 90px;

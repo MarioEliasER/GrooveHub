@@ -1,0 +1,115 @@
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  width: 20%;
+  /* background-color: #212121; */
+  background-color: black;
+}
+
+.logo {
+  background-color: #ffc107;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo a {
+  font-size: 23px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  width: auto;
+  padding: 5px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 545;
+}
+
+.menu a:hover {
+  color: #ffc107;
+  transition: all 1s;
+}
+
+main {
+  background-color: #001b79;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.VistaPrincipal {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* .imagen {
+  width: 50%;
+  background-image: url(images/shakira.jpg);
+  background-size: cover;
+  filter: drop-shadow(30px 20px 20px black);
+} */
+
+.m1 {
+  width: 50%;
+  filter: drop-shadow(30px 20px 20px black);
+  overflow: hidden;
+  height: 100%;
+}
+
+.m img {
+  width: 100%;
+}
+
+.info {
+  width: 50%;
+  margin-left: 18px;
+}
+
+.info h1 {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+}
+
+.info p {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 30px;
+  text-align: justify;
+}

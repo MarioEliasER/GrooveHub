@@ -75,3 +75,11 @@ select option {
 #btnCancelar {
   margin-left: 20px;
 }
+
+
+form img {
+    max-width: 20%;
+    max-height: 100px;
+    display: block;
+    margin: 20px auto;
+}

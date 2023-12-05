@@ -4,7 +4,7 @@
     ViewData["Title"] = "Agregar";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-<form method="post" action="~/Admin/Albumes/Agregar" enctype="multipart/form-data">
+@*<form method="post" action="~/Admin/Albumes/Agregar" enctype="multipart/form-data">
     <h1>Agregar Álbum</h1>
     <div>
         <label>Nombre del álbum:</label>
@@ -18,6 +18,30 @@
     <div class="Botones">
         <p id="Error">@Html.ValidationSummary(true)</p>
         <input type="submit" value="Agregar" id="btnAgregar" />
+        <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
+    </div>
+</form>*@
+
+<form method="post" action="~/Admin/Albumes/Agregar" enctype="multipart/form-data">
+    <h1>Agregar Álbum</h1>
+    <div>
+        <span>
+            <label>Nombre del álbum:</label>
+            <input type="text" id="txtNombrealbum" asp-for="Album.TituloAlbum" />
+        </span>
+        <span id="a">
+            <label>Año de lanzamiento:</label>
+            <input type="number" min="0" id="txtlanzamiento" asp-for="Album.FechaLanzamiento" />
+        </span>
+        <span>
+            <label>Imagen:</label>
+            <input type="file" id="fileUpload1" asp-for="AlbumFile" accept="image/jpg" />
+            <img id="imagePreview" src="~/images/no-disponible.jpg" />
+        </span>
+    </div>
+    <div class="Botones">
+        <p id="Error"></p>
+        <input type="button" value="Agregar" id="btnAgregar" />
         <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
     </div>
 </form>

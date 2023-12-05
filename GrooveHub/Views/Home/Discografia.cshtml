@@ -1,60 +1,21 @@
-﻿
+﻿@model GrooveHub.Models.ViewModels.DiscografiaAlbumesViewModel
 @{
     ViewData["Title"] = "Discografia";
-    Layout = "~/Views/Shared/Layout.cshtml";
+    Layout = "~/Views/Shared/Layout.cshtml";    
 }
 <section class="VistaAlbums">
     <section class="lista">
         <ul>
-            <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-            <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-             <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-             <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-             <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-            <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
-            <li>
-                <a href="~/Home/Cancion">
-                    <img src="~/images/ElDorado.jpg" alt="" />
-                    <!-- <label>El dorado (2017)</label> -->
-                    El dorado (2017)
-                </a>
-            </li>
+            @foreach (var album in Model.Albumes)
+            {
+                <li>
+                    <a href="~/Home/Album/@album.Titulo.Replace(" ", "-")">
+                        <img src="~/albumes/@(album.Id).jpg" alt="@album.Titulo" />
+                        <!-- <label>El dorado (2017)</label> -->
+                        @album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))
+                    </a>
+                </li>
+            }
         </ul>
     </section>
 </section>

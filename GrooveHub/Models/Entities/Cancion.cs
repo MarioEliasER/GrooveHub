@@ -9,11 +9,11 @@ public partial class Cancion
 
     public string Nombre { get; set; } = null!;
 
-    public DateTime Añolanzamiento { get; set; }
+    public DateTime AñoLanzamiento { get; set; }
 
     public TimeOnly Duracion { get; set; }
 
-    public int Idalbum { get; set; }
+    public int IdAlbum { get; set; }
 
-    public virtual Album IdalbumNavigation { get; set; } = null!;
+    public virtual Album IdAlbumNavigation { get; set; } = null!;
 }

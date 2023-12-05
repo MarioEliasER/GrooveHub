@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/AdminVistas/PrincipalEstilo.css" />
+    <link rel="stylesheet" href="~/AdminVistas/Biografia.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="logo">
+                <a href="~/images/compact-disc-with-glare.png">GrooveHub</a>
+            </section>
+            <nav class="menu">
+                <ul>
+                    <li><a href="~/Admin/" class="inicio">Inicio</a></li>
+                    <li><a href="~/Admin/Albumes/">Lista de Álbum</a></li>
+                    <li><a href="~/Admin/Canciones/">Lista de Canción</a></li>
+                    <li><a href="~/Admin/Biografia/Index">Biografía</a></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>

@@ -9,7 +9,7 @@ public partial class Usuario
 
     public string Nombre { get; set; } = null!;
 
-    public string Correoelectronico { get; set; } = null!;
+    public string CorreoElectronico { get; set; } = null!;
 
     public string Contrasena { get; set; } = null!;
 

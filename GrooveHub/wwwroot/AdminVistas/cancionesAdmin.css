@@ -1,0 +1,77 @@
+form {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#a input {
+    width: 140px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.cont {
+  margin-top: 20px;
+}
+
+label {
+  font-size: 25px;
+}
+
+input {
+  font-size: 17px;
+  width: 350px;
+}
+
+span {
+  display: block;
+  margin: 15px;
+}
+
+h1 {
+  margin-bottom: 55px;
+}
+
+select {
+  width: 350px;
+  font-size: 18px;
+}
+
+select option {
+  text-align: center;
+}
+
+#Error {
+  font-size: 27px;
+  margin: auto;
+  color: red;
+  padding-bottom: 19px;
+}
+
+.Botones {
+  margin: auto;
+  padding-top: 70px;
+  align-items: center;
+}
+
+.Botones input {
+  margin-top: 10px;
+  height: 30px;
+  width: 95px;
+  background-color: #e9b824;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.Botones input:hover {
+  box-shadow: 1px 1px 2px 1px black;
+  color: white;
+}
+
+#btnCancelar {
+  margin-left: 20px;
+}

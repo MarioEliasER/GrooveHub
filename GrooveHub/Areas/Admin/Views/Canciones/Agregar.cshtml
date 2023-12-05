@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form method="post">
+    <h1>Agregar Canción</h1>
+
+    <div class="cont">
+        <span>
+            <label>Nombre:</label>
+            <input type="text" id="txtNombre" />
+        </span>
+        <span id="a">
+            <label>Año de lanzamiento:</label>
+            <input min="0" type="number" id="txtlanzamiento" /><br />
+        </span>
+        <span>
+            <label>Duracion:</label>
+            <input type="text" id="txtDuracion" /><br />
+        </span>
+        <span>
+            <label>Albúm:</label>
+            <select>
+                <option value="">El dorado</option>
+                <option value="">El dorado</option>
+                <option value="">El dorado</option>
+            </select>
+        </span>
+    </div>
+
+    <div class="Botones">
+        <p id="Error">No se puedeee hacer esto</p>
+        <input type="button" value="Agregar" id="btnAgregar" />
+        <input type="button" value="Cancelar" id="btnCancelar" />
+    </div>
+</form>
+

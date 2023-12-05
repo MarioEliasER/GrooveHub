@@ -9,5 +9,10 @@ namespace GrooveHub.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult Agregar()
+        {
+            return View();
+        }
     }
 }

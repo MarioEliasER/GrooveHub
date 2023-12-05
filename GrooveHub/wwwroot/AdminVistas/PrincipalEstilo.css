@@ -1,0 +1,206 @@
+/* header {
+  right: 0;
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  vertical-align: middle;
+  background-color: aqua;
+}
+
+.seccion1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc107;
+  width: 15%;
+  border-radius: 10px;
+  margin-left: 30px;
+  padding: 5px;
+}
+
+.titulo {
+  margin-left: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #212121;
+  font-weight: bold;
+}
+
+#logo {
+  height: 45px;
+  width: 45px;
+}
+
+.menu {
+  width: 50%;
+  margin-left: auto;
+  font-size: 18px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu a {
+  margin-left: 40px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 540;
+}
+
+body {
+  background-color: #2196f3;
+} */
+
+/*
+main {
+  margin-top: 5px;
+  display: flex;
+}
+
+.img {
+  width: 40%;
+  height: 509px;
+  margin-left: 30px;
+  position: relative;
+  z-index: -1;
+}
+
+#imgcantante {
+  margin-top: 0px;
+  filter: drop-shadow(20px 15px 20px black);
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  margin-bottom: 10px;
+}
+
+.inf {
+  width: 60%;
+  text-align: center;
+  text-justify: auto;
+  margin: 10px;
+}
+
+.inf h1 {
+  font-size: 80px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+} */
+
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  width: 20%;
+  /* background-color: #212121; */
+  background-color: black;
+}
+
+.logo {
+  background-color: #ffc107;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo a {
+  font-size: 23px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  width: auto;
+  padding: 5px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-bottom: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  font-weight:545;
+}
+
+.menu a:hover {
+  color: #ffc107;
+  transition: all 1s;
+}
+
+main {
+    /* background-color: #1976d2; */
+    background-color: #001b79;
+    color: white;
+    text-align: center;
+    width: 80%;
+    display: flex;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.imagen {
+  width: 50%;
+  background-image: url(imgShakira.png);
+  background-size: cover;
+  filter: drop-shadow(30px 20px 20px black);
+  /* opacity: 0;
+  transition: opacity 1s ease-in;
+  opacity: 1; */
+}
+
+/* .imagen:hover {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+} */
+
+.info {
+  width: 50%;
+}
+
+.info h1 {
+  font-size: 100px;
+  text-align: center;
+  color: white;
+}
+
+.info p {
+  color: #ffffff;
+  font-size: 17px;
+  margin: 30px;
+  text-align: justify;
+}
+

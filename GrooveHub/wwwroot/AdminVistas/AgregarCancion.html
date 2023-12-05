@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Agregar Cancion</title>
+    <link rel="stylesheet" href="Canciones.css" />
+    <link rel="stylesheet" href="PrincipalEstilo.css" />
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="compact-disc-with-glare.png" alt="" />
+            <a href="#">GrooveHub</a>
+        </section>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" class="inicio">Inicio</a></li>
+                <li><a href="#">Lista de Álbum</a></li>
+                <li><a href="#">Lista de Canción</a></li>
+                <li><a href="#">Biografía</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <h1>Agregar Canción</h1>
+            <div>
+                <label>Nombre:</label>
+                <input type="text" id="txtNombre" />
+                <br />
+                <label>Año de lanzamiento:</label>
+                <input type="text" id="txtlanzamiento" /><br />
+                <label>Duracion:</label>
+                <input type="text" id="txtDuracion" /><br /> 
+            </div>
+            <div class="Botones">
+                <p id="Error"></p>
+                <input type="button" value="Agregar" id="btnAgregar"/>
+                <input type="button" value="Cancelar" id="btnCancelar"/>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

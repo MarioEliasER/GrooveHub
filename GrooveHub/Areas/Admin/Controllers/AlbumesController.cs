@@ -81,5 +81,69 @@ namespace GrooveHub.Areas.Admin.Controllers
             }
             return View(vm);
         }
+
+        public IActionResult Editar(int id)
+        {
+            var album = Repository.Get(id);
+            if (album == null)
+            {
+                return RedirectToAction("Index");
+            }
+            AdminAgregarAlbumViewModel vm = new()
+            {
+                Album = album
+            };
+            return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(AdminAgregarAlbumViewModel vm)
+        {
+            if (string.IsNullOrWhiteSpace(vm.Album.TituloAlbum))
+            {
+                ModelState.AddModelError("", "El titulo no puede estar vacío.");
+            }
+            if ((vm.Album.FechaLanzamiento.Year < 1990 || vm.Album.FechaLanzamiento.Year > DateTime.Now.Year) ||
+            (vm.Album.FechaLanzamiento.Year == DateTime.Now.Year &&
+            (vm.Album.FechaLanzamiento.Month > DateTime.Now.Month ||
+            (vm.Album.FechaLanzamiento.Month == DateTime.Now.Month && vm.Album.FechaLanzamiento.Day > DateTime.Now.Day))))
+            {
+                ModelState.AddModelError("", "La fecha es incorrecta");
+            }
+            if (vm.AlbumFile == null)
+            {
+                ModelState.AddModelError("", "Agregue la imagen del album correspondiente.");
+            }
+            if (vm.AlbumFile != null)
+            {
+                if (vm.AlbumFile.ContentType != "image/jpeg")
+                {
+                    ModelState.AddModelError("", "Solo se permiten imagenes JPEG.");
+                }
+                if (vm.AlbumFile.Length > 5000 * 1024)
+                {
+                    ModelState.AddModelError("", "Solo se permiten archivos no mayores a 5MB.");
+                }
+            }
+            if (ModelState.IsValid)
+            {
+                var album = Repository.Get(vm.Album.Id);
+                if (album == null)
+                {
+                    return RedirectToAction("Index");
+                }
+                album.TituloAlbum = vm.Album.TituloAlbum;
+                album.FechaLanzamiento = vm.Album.FechaLanzamiento;
+                Repository.Update(album);
+                if (vm.AlbumFile != null)
+                {
+                    System.IO.FileStream fs = System.IO.File.Create($"wwwroot/albumes/{vm.Album.Id}.jpg");
+                    vm.AlbumFile.CopyTo(fs);
+                    fs.Close();
+                }
+                return RedirectToAction("Index");
+            }
+            return View(vm);
+        }
     }
 }

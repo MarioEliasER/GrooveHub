@@ -19,4 +19,9 @@
     <Folder Include="Areas\Admin\Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\AdminVistas\BiografiaAdmin.css" />
+    <None Include="wwwroot\AdminVistas\EditarBiografia.html" />
+  </ItemGroup>
+
 </Project>

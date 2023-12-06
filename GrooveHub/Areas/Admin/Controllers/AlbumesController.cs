@@ -30,7 +30,9 @@ namespace GrooveHub.Areas.Admin.Controllers
 
         public IActionResult Agregar()
         {
-            return View();
+
+            AdminAgregarAlbumViewModel vm = new();
+            return View(vm);
         }
 
         [HttpPost]
@@ -46,6 +48,10 @@ namespace GrooveHub.Areas.Admin.Controllers
             (vm.Album.FechaLanzamiento.Month == DateTime.Now.Month && vm.Album.FechaLanzamiento.Day > DateTime.Now.Day))))
             {
                 ModelState.AddModelError("", "La fecha es incorrecta");
+            }
+            if(vm.AlbumFile == null)
+            {
+                ModelState.AddModelError("", "Agregue la imagen del album correspondiente.");
             }
             if (vm.AlbumFile != null)
             {

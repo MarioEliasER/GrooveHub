@@ -45,15 +45,18 @@ select option {
 }
 
 #Error {
-  font-size: 27px;
-  margin: auto;
-  color: red;
-  padding-bottom: 19px;
+    font-size: 27px;
+    margin: auto;
+    color: red;
+    padding-bottom: 19px;
+    background-color: purple;
+    margin: 0;
+    padding: 0;
 }
 
 .Botones {
   margin: auto;
-  padding-top: 70px;
+  padding-top: 40px;
   align-items: center;
 }
 

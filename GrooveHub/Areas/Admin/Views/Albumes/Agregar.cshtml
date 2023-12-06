@@ -30,8 +30,8 @@
             <input type="text" id="txtNombrealbum" asp-for="Album.TituloAlbum" />
         </span>
         <span id="a">
-            <label>Año de lanzamiento:</label>
-            <input type="number" min="0" id="txtlanzamiento" asp-for="Album.FechaLanzamiento" />
+            <label>Fecha de lanzamiento:</label>
+            <input type="date" min="0" id="txtlanzamiento" asp-for="Album.FechaLanzamiento" />
         </span>
         <span>
             <label>Imagen:</label>
@@ -41,7 +41,7 @@
     </div>
     <div class="Botones">
         <p id="Error">@Html.ValidationSummary(true)</p>
-        <input type="button" value="Agregar" id="btnAgregar" />
+            <input type="submit" value="Agregar" id="btnAgregar" />
         <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
     </div>
 </form>

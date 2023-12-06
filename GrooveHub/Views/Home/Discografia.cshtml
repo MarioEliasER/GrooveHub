@@ -11,8 +11,8 @@
                 <li>
                     <a href="~/Home/Album/@album.Titulo.Replace(" ", "-")">
                         <img src="~/albumes/@(album.Id).jpg" alt="@album.Titulo" />
-                        <!-- <label>El dorado (2017)</label> -->
-                        @album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))
+                        <label>@album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))</label>
+                        @*@album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))*@
                     </a>
                 </li>
             }

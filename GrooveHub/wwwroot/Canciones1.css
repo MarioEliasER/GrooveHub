@@ -11,13 +11,14 @@
   padding: 0;
 }
 
-.canciones ul li {
-  display: flex;
-  background-color: black;
-  margin-bottom: 10px;
-  align-items: center;
-  border-radius: 10px;
-}
+    .canciones ul li {
+        display: flex;
+        background-color: #EBB02D;
+        margin-bottom: 10px;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px 2px black;
+    }
 
 .canciones ul li section {
   align-items: center;
@@ -29,11 +30,13 @@
   margin: 120px;
   font-size: 19px;
   height: auto;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
 .canciones ul li img {
   height: 90px;
   width: 90px;
   margin: 10px;
+  border-radius:50px;
 }

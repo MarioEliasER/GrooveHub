@@ -1,0 +1,21 @@
+﻿@model GrooveHub.Models.Entities.Cancion
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<form method="post" action="~/Admin/Canciones/Agregar">
+    <h1>Eliminar Canción</h1>
+    <div class="cont">
+        <h1>¿Estás seguro de eliminar la siguiente canción?</h1>
+        <input type="hidden" asp-for="Id" />
+        <span>
+            <label>@Model.Nombre</label>
+        </span>
+    </div>
+    <div class="Botones">
+        <p id="Error">@Html.ValidationSummary(true)</p>
+        <input type="submit" value="Eliminar" id="btnAgregar" />
+        <a href="~/Admin/Canciones/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
+    </div>
+</form>

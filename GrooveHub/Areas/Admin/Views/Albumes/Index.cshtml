@@ -13,8 +13,8 @@
                 <img src="~/albumes/@(album.Id).jpg" alt="@album.NombreAlbum" />
                 <section>
                     <label>@album.NombreAlbum</label>
-                    <a><img src="~/AdminVistas/editb.png" /></a>
-                    <a><img src="~/AdminVistas/deleteb.png" /></a>
+                    <a href="~/Admin/Albumes/Editar/@album.Id"><img src="~/AdminVistas/editb.png" /></a>
+                    <a href="~/Admin/Albumes/Eliminar/@album.Id"><img src="~/AdminVistas/deleteb.png" /></a>
                 </section>
             </li>
         }

@@ -49,10 +49,6 @@ namespace GrooveHub.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", "La fecha es incorrecta");
             }
-            if(vm.AlbumFile == null)
-            {
-                ModelState.AddModelError("", "Agregue la imagen del album correspondiente.");
-            }
             if (vm.AlbumFile != null)
             {
                 if (vm.AlbumFile.ContentType != "image/jpeg")
@@ -110,19 +106,15 @@ namespace GrooveHub.Areas.Admin.Controllers
             {
                 ModelState.AddModelError("", "La fecha es incorrecta");
             }
-            if (vm.AlbumFile == null)
-            {
-                ModelState.AddModelError("", "Agregue la imagen del album correspondiente.");
-            }
             if (vm.AlbumFile != null)
             {
                 if (vm.AlbumFile.ContentType != "image/jpeg")
                 {
-                    ModelState.AddModelError("", "Solo se permiten imagenes JPEG.");
+                    ModelState.AddModelError("", "Solamente se pueden subir imagenes en formato JPEG.");
                 }
                 if (vm.AlbumFile.Length > 5000 * 1024)
                 {
-                    ModelState.AddModelError("", "Solo se permiten archivos no mayores a 5MB.");
+                    ModelState.AddModelError("", "El máximo tamaño de archivo es de 5MB.");
                 }
             }
             if (ModelState.IsValid)
@@ -144,6 +136,33 @@ namespace GrooveHub.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
             return View(vm);
+        }
+
+        public IActionResult Eliminar(int id)
+        {
+            var album = Repository.Get(id);
+            if (album == null)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(album);
+        }
+
+        [HttpPost]
+        public IActionResult Eliminar(Album a)
+        {
+            var album = Repository.Get(a.Id);
+            if (album == null)
+            {
+                return RedirectToAction("Index");
+            }
+            Repository.Delete(album);
+            var ruta = $"wwwroot/albumes/{a.Id}";
+            if (System.IO.File.Exists(ruta))
+            {
+                System.IO.File.Delete(ruta);
+            }
+            return RedirectToAction("Index");
         }
     }
 }

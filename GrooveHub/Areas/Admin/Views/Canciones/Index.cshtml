@@ -1,0 +1,21 @@
+﻿@model GrooveHub.Areas.Admin.Models.AdminCancionesViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<h1>Administrar Canciones</h1>
+<a href="~/Admin/Canciones/Agregar"><img src="~/AdminVistas/add.png" /></a>
+<ul>
+    @foreach (var c in Model.Canciones)
+    {
+        <li>
+            <section>
+                <label>@c.Nombre</label>
+                <label>@c.AñoLanzamiento.ToString("yyyy")</label>
+                <label>@c.Duracion.ToString("mm\\:ss")</label>
+                <a href="~/Admin/Canciones/Editar/@c.Id"><img src="~/AdminVistas/editb.png" /></a>
+                <a href="~/Admin/Canciones/Eliminar/@c.Id"><img src="~/AdminVistas/deleteb.png" /></a>
+            </section>
+        </li>
+    }
+</ul>

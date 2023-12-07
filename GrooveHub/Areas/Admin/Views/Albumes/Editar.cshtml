@@ -1,30 +1,14 @@
 ﻿@model GrooveHub.Areas.Admin.Models.AdminAgregarAlbumViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "Agregar";
+    ViewData["Title"] = "Editar";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-@*<form method="post" action="~/Admin/Albumes/Agregar" enctype="multipart/form-data">
-    <h1>Agregar Álbum</h1>
-    <div>
-        <label>Nombre del álbum:</label>
-        <input type="text" id="txtNombrealbum" asp-for="Album.TituloAlbum" /><br />
-        <label>Año de lanzamiento:</label>
-        <input type="datetime" asp-for="Album.FechaLanzamiento" /><br />
-        <label>Imagen:</label>
-        <input type="file" id="fileUpload1" asp-for="AlbumFile" accept="image/jpg" /><br />
-        <img id="imagePreview" src="~/images/no-disponible.jpg" />
-    </div>
-    <div class="Botones">
-        <p id="Error">@Html.ValidationSummary(true)</p>
-        <input type="submit" value="Agregar" id="btnAgregar" />
-        <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
-    </div>
-</form>*@
 
-<form method="post" action="~/Admin/Albumes/Agregar" enctype="multipart/form-data">
-    <h1>Agregar Álbum</h1>
+<form method="post" action="~/Admin/Albumes/Editar" enctype="multipart/form-data">
+    <h1>Editar Álbum</h1>
     <div>
+        <input type="hidden" asp-for="Album.Id" />
         <span>
             <label>Nombre del álbum:</label>
             <input type="text" id="txtNombrealbum" asp-for="Album.TituloAlbum" />
@@ -36,12 +20,12 @@
         <span>
             <label>Imagen:</label>
             <input type="file" id="fileUpload1" asp-for="AlbumFile" accept="image/jpg" />
-            <img id="imagePreview" src="~/images/no-disponible.jpg" />
+            <img id="imagePreview" src="~/albumes/@(Model.Album.Id).jpg" />
         </span>
     </div>
     <div class="Botones">
         <p id="Error">@Html.ValidationSummary(true)</p>
-            <input type="submit" value="Agregar" id="btnAgregar" />
+        <input type="submit" value="Editar" id="btnAgregar" />
         <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
     </div>
 </form>

@@ -1,13 +1,15 @@
 ﻿@model GrooveHub.Areas.Admin.Models.AdminAgregarCancionViewModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
+    ViewData["Title"] = "Editar";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<form method="post" action="~/Admin/Canciones/Agregar">
-    <h1>Agregar Canción</h1>
+<form method="post" action="~/Admin/Canciones/Editar">
+    <h1>Editar Canción</h1>
 
     <div class="cont">
+        <input type="hidden" asp-for="Cancion.Id" />
         <span>
             <label>Nombre:</label>
             <input type="text" id="txtNombre" asp-for="Cancion.Nombre" />
@@ -30,7 +32,7 @@
 
     <div class="Botones">
         <p id="Error">@Html.ValidationSummary(true)</p>
-        <input type="submit" value="Agregar" id="btnAgregar" />
+        <input type="submit" value="Editar" id="btnAgregar" />
         <a href="~/Admin/Canciones/">
             <input type="button" value="Cancelar" id="btnCancelar" />
         </a>

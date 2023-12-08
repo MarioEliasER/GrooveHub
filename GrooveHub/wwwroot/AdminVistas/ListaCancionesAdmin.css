@@ -1,0 +1,80 @@
+.listaC {
+  height: 100%;
+  width: 100%;
+}
+
+.listaC ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 85%;
+  overflow-y: auto;
+  padding-top: 13px;
+}
+
+.listaC ul li {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.listaC ul li label {
+  display: block;
+}
+
+.listaC u li .listaC ul li a img {
+  background-color: yellow;
+  height: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 13px;
+}
+
+.listaC ul li section div {
+  margin-top: 10px;
+}
+
+.listaC ul li section {
+  padding: 20px;
+}
+
+.listaC ul li section label {
+    font-size: 20px;
+}
+
+.listaC ul li section div{
+    padding-top:10px;
+}
+
+.listaC ul li section img {
+  border-radius: 5px;
+  padding-bottom: 7px;
+}
+
+#btnAdd {
+  font-size: 15px;
+  border: 0px;
+  border-radius: 5px;
+  /*padding-inline: 5px;*/
+  padding-block: 5px;
+  background-color: #f4ce14;
+  font-weight: bold;
+  width:auto;
+}
+
+#btnAdd:hover {
+  box-shadow: 1px 1px 2px 1px black;
+}
+
+.listaC ul li section:hover {
+  /* box-shadow: -0.5px 0.5px 3px 3px black, 0.5px 0.5px 3px 3px black; */
+  transition: all 0.5s;
+  border-radius: 4px;
+  background-color: #445069;
+}

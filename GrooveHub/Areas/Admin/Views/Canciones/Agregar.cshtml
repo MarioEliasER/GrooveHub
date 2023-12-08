@@ -13,12 +13,12 @@
             <input type="text" id="txtNombre" asp-for="Cancion.Nombre" />
         </span>
         <span id="a">
-            <label>Año de lanzamiento:</label>
-            <input type="datetime" id="txtlanzamiento" asp-for="Cancion.AñoLanzamiento" /><br />
+            <label>Fecha de lanzamiento:</label>
+            <input type="date" id="txtlanzamiento" asp-for="Cancion.AñoLanzamiento" /><br />
         </span>
         <span>
             <label>Duracion:</label>
-            <input type="time" id="txtDuracion" asp-for="Cancion.Duracion" /><br />
+            <input type="time" id="txtDuracion" asp-for="Cancion.Duracion" step="60"/><br />
         </span>
         <span>
             <label>Albúm:</label>

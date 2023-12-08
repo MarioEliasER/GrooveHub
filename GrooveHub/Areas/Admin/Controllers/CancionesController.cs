@@ -1,23 +1,35 @@
 ﻿using FruitStore.Repositories;
 using GrooveHub.Areas.Admin.Models;
 using GrooveHub.Models.Entities;
+using GrooveHub.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace GrooveHub.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CancionesController : Controller
     {
-        public Repository<Cancion> Repository { get; }
+        public CancionesRepository Repository { get;}
+
+        //public Repository<Cancion> Repository { get; }
+
         public Repository<Album> Albumrepository { get; }
 
-        public CancionesController(Repository<Cancion> repository, Repository<Album> albumrepository)
+        //public CancionesController(Repository<Cancion> repository, Repository<Album> albumrepository)
+        //{
+        //    Repository = repository;
+        //    Albumrepository = albumrepository;
+        //}
+
+        public CancionesController(CancionesRepository repository, Repository<Album> albumrepository)
         {
             Repository = repository;
             Albumrepository = albumrepository;
         }
+
         public IActionResult Index()
         {
             AdminCancionesViewModel vm = new()
@@ -27,7 +39,9 @@ namespace GrooveHub.Areas.Admin.Controllers
                     Id = x.Id,
                     Nombre = x.Nombre,
                     AñoLanzamiento = x.AñoLanzamiento,
-                    Duracion = x.Duracion
+                    Duracion = x.Duracion,
+                    IdAlbum = x.IdAlbumNavigation.Id,
+                    NombreAlbum = x.IdAlbumNavigation.TituloAlbum
                 })
             };
             return View(vm);
@@ -47,6 +61,8 @@ namespace GrooveHub.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Agregar(AdminAgregarCancionViewModel vm)
         {
+            ModelState.Clear();
+
             if (string.IsNullOrWhiteSpace(vm.Cancion.Nombre))
             {
                 ModelState.AddModelError("", "El nombre de la canción no puede estar vacío.");
@@ -59,8 +75,16 @@ namespace GrooveHub.Areas.Admin.Controllers
             {
                 vm.Cancion.Duracion = new TimeOnly(0, vm.Cancion.Duracion.Minute, vm.Cancion.Duracion.Second);
             }
-            var albumes = Albumrepository.GetAll();
-            List<int> albumesids = albumes.Select(x => x.Id).ToList();
+
+            //var albumes = Albumrepository.GetAll();
+            //List<int> albumesids = albumes.Select(x => x.Id).ToList();
+            vm.Albumes = Albumrepository.GetAll().Select(x => new AdminAlbumModel
+            {
+                Id = x.Id,
+                NombreAlbum = x.TituloAlbum
+            });
+            List<int> albumesids = vm.Albumes.Select(x => x.Id).ToList();
+
             if (!albumesids.Contains(vm.Cancion.IdAlbum))
             {
                 ModelState.AddModelError("", "Selecciona un album válido.");
@@ -68,6 +92,8 @@ namespace GrooveHub.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 Repository.Insert(vm.Cancion);
+                //System.IO.FileStream fs = System.IO.File.Create($"wwwroot/canciones/{vm.Cancion.IdAlbum}.jpg");
+                System.IO.File.Copy($"wwwroot/albumes/{vm.Cancion.IdAlbum}.jpg", $"wwwroot/canciones/{vm.Cancion.Id}.jpg");
                 return RedirectToAction("Index");
             }
             return View(vm);

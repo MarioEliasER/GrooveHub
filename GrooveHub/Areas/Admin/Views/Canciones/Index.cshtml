@@ -31,9 +31,9 @@
         {
             <li>
                 <section>
-                    <img src="~/AdminVistas/17.jpg" alt="" />
+                    <img src="~/canciones/@(c.Id).jpg" alt="" />
                     <label>Titulo: @c.Nombre</label>
-                    <label>Album: El dorado</label>
+                    <label>Album: @c.NombreAlbum</label>
                     <label>Año de lanzamiento: @c.AñoLanzamiento.ToString("yyyy")</label>
                     <label>Duración: @c.Duracion.ToString("mm\\:ss")</label>
                     <div>

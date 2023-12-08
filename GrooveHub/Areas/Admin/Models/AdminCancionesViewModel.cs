@@ -16,5 +16,8 @@ namespace GrooveHub.Areas.Admin.Models
         public DateTime AñoLanzamiento { get; set; }
 
         public TimeOnly Duracion { get; set; }
+
+        public int IdAlbum { get; set; }
+        public string NombreAlbum { get; set; } = null!;
     }
 }

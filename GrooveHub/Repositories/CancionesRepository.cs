@@ -16,5 +16,12 @@ namespace GrooveHub.Repositories
                 .Include(x=> x.IdAlbumNavigation)
                 .Where(x=>x.IdAlbumNavigation.TituloAlbum ==  albumId).OrderBy(x=>x.Id);
         }
+
+        public override IEnumerable<Cancion> GetAll()
+        {
+            return Context.Cancion
+                .Include(x => x.IdAlbumNavigation).OrderBy(x => x.Nombre);
+        }
     }
+
 }

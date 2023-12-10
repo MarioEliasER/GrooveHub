@@ -113,3 +113,47 @@ main {
   margin: 30px;
   text-align: justify;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: blue;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+    .container h2 {
+        text-align: center;
+        color: white;
+    }
+
+    .container input[type="password"],
+    .container input[type="email"] {
+        width: 94%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .container input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffc107;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 1s all;
+    }
+
+        .container input[type="submit"]:hover {
+            background-color: #dea600;
+        }

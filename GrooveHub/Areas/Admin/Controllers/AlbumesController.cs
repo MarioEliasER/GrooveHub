@@ -1,4 +1,4 @@
-﻿using FruitStore.Repositories;
+﻿using GrooveHub.Repositories;
 using GrooveHub.Areas.Admin.Models;
 using GrooveHub.Models.Entities;
 using Microsoft.AspNetCore.Authorization;

@@ -3,18 +3,14 @@
     ViewData["Title"] = "Album";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<section class="canciones">
-    <ul>
+<section class="LCanciones">
        @foreach (var cancion in Model.CancionesAlbumes)
         {
-            <li>
-                <img src="~/albumes/@(cancion.IdAlbum).jpg" alt="@cancion.Nombre" />
-                <section>
-                    <label>@cancion.Nombre</label>
-                    <label>@cancion.AñoLanzamiento.ToString("yyyy")</label>
-                    <label>@cancion.Duracion.ToString("mm\\:ss")</label>
-                </section>
-            </li>
+        <div class="cancion">
+            <img src="~/albumes/@(cancion.IdAlbum).jpg" alt="@cancion.Nombre">
+            <label>@cancion.Nombre</label>
+            <label>@cancion.AñoLanzamiento.ToString("yyyy")</label>
+            <label>@cancion.Duracion.ToString("mm\\:ss")</label>
+        </div>
         }
-    </ul>
 </section>

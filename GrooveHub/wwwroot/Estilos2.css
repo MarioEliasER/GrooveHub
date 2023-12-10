@@ -1,0 +1,433 @@
+body {
+  background-color: #0b2447;
+  height: 100vh;
+  overflow: auto;
+  margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: block;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+#logo {
+  justify-content: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: bolder;
+}
+
+#logo label {
+  font-size: 26px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.bio {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+  flex: 1;
+  margin: 0;
+}
+
+.txtBio {
+  width: 50%;
+  bottom: 0;
+  margin: 10px;
+  color: white;
+  text-align: justify;
+}
+
+.txtBio p {
+  margin-right: 20px;
+}
+
+#imagenBio {
+  width: 50%;
+  overflow: hidden;
+  height: 90vh;
+}
+
+#imagenBio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(33px 45px 5px black);
+  position: relative;
+  align-self: first baseline;
+}
+
+.disc {
+  width: 95%;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fila {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex-basis: calc(33.33% - 20px);
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.columna img {
+  width: 100%;
+}
+
+.tituloAlbum {
+  background: transparent;
+  text-align: center;
+  height: 99%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  justify-content: center;
+  color: transparent;
+}
+
+.tituloAlbum:hover {
+  background: rgba(68, 80, 105, 0.7);
+}
+
+.tituloAlbum:hover h2 {
+  visibility: visible;
+  color: white;
+  font-size: 50px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.tituloAlbum h2 {
+  font-weight: bold;
+  position: absolute;
+  transform: translateX(50%);
+  top: 0;
+  text-align: center;
+  transition: 0.2s;
+  visibility: collapse;
+  color: transparent;
+}
+
+.botonesAlbum {
+  position: absolute;
+  top: 0;
+  height: 99%;
+  width: 100%;
+  margin: auto;
+  transform: translateY(50%);
+  justify-content: center;
+}
+
+/* .botonesAlbum input {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  width: 100%;
+}  */
+
+.botonesAlbum span {
+  /* display: inline-block; */
+  padding-right: 5px;
+  display: block;
+  justify-content: center;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
+
+.botonesAlbum span input {
+  height: 30px;
+  margin: 0;
+  background-color: #0b2447;
+  border: 0;
+  font-size: 18px;
+  vertical-align: middle;
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+  line-height: 2px;
+}
+
+.botonesAlbum span input:hover {
+  font-weight: bold;
+}
+
+.botonesAlbum span i {
+  color: black;
+  vertical-align: middle;
+  font-size: 30px;
+  margin-right: 5px;
+  color: white;
+}
+
+.botonesAlbum span a {
+  background-color: black;
+  width: 30px;
+}
+
+#span2 {
+  margin-left: 15px;
+}
+
+.tituloAlbum:hover span {
+  visibility: visible;
+}
+
+@media (max-width: 700px) {
+  .fila {
+    flex-direction: column;
+  }
+}
+
+.cancion {
+  background-color: #0e356b;
+  padding: 20px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.cancion img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  margin: 0;
+  padding: 0;
+  border-radius: 40px;
+}
+
+.cancion label {
+  justify-content: space-between;
+  font-size: 23px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.cancion:hover {
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(1) translateY(-20px);
+  background-color: #12458a;
+}
+
+.cancion:hover label {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+/* ESTILOS VISTAS ADMIN */
+
+/* ESTILOS ADMIN BIO */
+#FORMBIO {
+  background-color: #213555;
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+  border-radius: 4px;
+}
+
+#FORMBIO textarea {
+  width: 85%;
+  margin: auto;
+  margin-left: 8%;
+  height: 88%;
+  margin-top: 15px;
+}
+
+.botones {
+  text-align: center;
+  margin-top: 5px;
+  justify-content: space-evenly;
+}
+
+.botones input {
+  background-color: #4f6f52;
+  padding: 10px;
+  padding-inline: 25px;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+/* ESTILOS ADMIN ALBUMES */
+.agregarAlbum {
+  margin-bottom: 25px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.agregarAlbum a input {
+  background-color: #4f6f52;
+  padding: 10px;
+  padding-inline: 25px;
+  font-weight: bold;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.agregarAlbum a:hover {
+  box-shadow: 15px 15px 18px 10px black;
+}
+
+.disc {
+  margin-top: 20px;
+}
+
+/* ESTILOS ADMIN AGREGAR ALBUM */
+.ADDADMINALBUM {
+  margin-top: 30px;
+}
+
+.ADDADMINALBUM form {
+  background-color: #213555;
+  width: 80%;
+  margin: auto;
+  /* height: 90vh; */
+  height: 100%;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.ADDADMINALBUM form label {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ADDADMINALBUM form input {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 400px;
+  text-align: center;
+}
+
+.ADDADMINALBUM .datosADDAlbum {
+  height: 70%;
+  padding-top: 30px;
+  text-align: center;
+  color: white;
+}
+
+.ADDADMINALBUM .botones1 {
+  text-align: center;
+  margin-top: 5px;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 30%;
+}
+
+.ADDADMINALBUM .botones1 input {
+  background-color: #4f6f52;
+  padding: 10px;
+  padding-inline: 25px;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  width: auto;
+}
+
+.ADDADMINALBUM .botones1 > a {
+  margin-right: 15px;
+}
+
+#ERROR {
+  color: red;
+  font-weight: bold;
+}
+
+/* ESTILOS ELIMINAR ALBUM */
+#FORMDELETEALUBUM {
+  color: white;
+  text-align: center;
+}
+
+.datosDELETEAlbum {
+  padding-top: 25px;
+}
+
+.datosDELETEAlbum label {
+  padding-bottom: 15px;
+}
+
+/* ESTILOS CANCIONES ADMIN */
+.CancionesADMIN {
+  background-color: yellow;
+  width: 100%;
+}
+
+.cancionADMIN {
+  background-color: #3a4d39;
+  padding: 10px;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.cancionADMIN img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  margin: 0;
+  padding: 0;
+  border-radius: 40px;
+}
+
+.cancionADMIN label {
+  justify-content: space-between;
+  font-size: 23px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+nav li .seleccionado {
+  text-decoration: underline;
+}

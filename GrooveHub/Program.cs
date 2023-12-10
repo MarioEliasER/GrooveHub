@@ -1,4 +1,3 @@
-using FruitStore.Repositories;
 using GrooveHub.Models.Entities;
 using GrooveHub.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -9,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<Repository<Album>>();
 builder.Services.AddTransient<Repository<Cancion>>();
 builder.Services.AddTransient<CancionesRepository>();
+builder.Services.AddTransient<Repository<Usuario>>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
     x =>
     {

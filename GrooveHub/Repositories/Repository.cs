@@ -1,6 +1,6 @@
 ﻿using GrooveHub.Models.Entities;
 
-namespace FruitStore.Repositories
+namespace GrooveHub.Repositories
 {
 	public class Repository<T> where T : class
 	{

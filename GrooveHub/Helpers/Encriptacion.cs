@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace FruitStore.Helpers
+namespace GrooveHub.Helpers
 {
     public static class Encriptacion
     {

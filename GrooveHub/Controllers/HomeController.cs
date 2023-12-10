@@ -1,5 +1,4 @@
-﻿using FruitStore.Repositories;
-using GrooveHub.Models.Entities;
+﻿using GrooveHub.Models.Entities;
 using GrooveHub.Models.ViewModels;
 using GrooveHub.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -7,7 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
 using System.Security.Claims;
-using FruitStore.Helpers;
+using GrooveHub.Helpers;
 
 namespace GrooveHub.Controllers
 {
@@ -39,7 +38,7 @@ namespace GrooveHub.Controllers
         {
             DiscografiaAlbumesViewModel vm = new()
             {
-                Albumes = Albumrepo.GetAll().OrderBy(x => x.TituloAlbum).Select(x => new AlbumModel
+                Albumes = Albumrepo.GetAll().OrderBy(x => x.Id).Select(x => new AlbumModel
                 {
                     Id = x.Id,
                     Titulo = x.TituloAlbum,

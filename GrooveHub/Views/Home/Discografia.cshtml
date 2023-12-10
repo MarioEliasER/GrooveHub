@@ -3,20 +3,24 @@
     ViewData["Title"] = "Discografia";
     Layout = "~/Views/Shared/Layout.cshtml";    
 }
-<section class="VistaAlbums">
-    <section class="lista">
-        <ul>
+<section class="disc">
+    <div class="fila">
             @foreach (var album in Model.Albumes)
             {
-                <li>
-                    <a href="~/Home/Album/@album.Titulo.Replace(" ", "-")">
-                        <img src="~/albumes/@(album.Id).jpg" alt="@album.Titulo" />
-                        <label>@album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))</label>
-                        @*@album.Titulo (@album.FechaLanzamiento.ToString("yyyy"))*@
-                    </a>
-                </li>
+                <div class="columna">
+                    <img src="~/albumes/@(album.Id).jpg" alt="@album.Titulo" />
+                    <div class="tituloAlbum">
+                        <h2>@album.Titulo</h2>
+                        <div class="botonesAlbum">
+                            <span>
+                                <i class="fas fa-play"></i>
+                                <a href="~/Home/Album/@album.Titulo.Replace(" ", "-")">
+                                    <input type="button" value="Ver Canciones" />
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             }
-        </ul>
-    </section>
+    </div>
 </section>
-

@@ -1,4 +1,4 @@
-﻿using FruitStore.Repositories;
+﻿using GrooveHub.Repositories;
 using GrooveHub.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 

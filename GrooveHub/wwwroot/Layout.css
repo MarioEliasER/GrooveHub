@@ -1,0 +1,94 @@
+body {
+  background-color: #0b2447;
+
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: block;
+}
+
+.fondo {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(Imagenes/leslie-del-moral-KQEubGnJwM0-unsplash.jpg);
+
+  position: relative;
+}
+
+#logo img {
+  width: 40px;
+  height: 40px;
+  color: white;
+  vertical-align: middle;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav div {
+  margin-right: 10%;
+} */
+
+#logo {
+  justify-content: center;
+  vertical-align: middle;
+  color: white;
+  font-weight: bolder;
+}
+
+#logo label {
+  font-size: 26px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  /* position: relative; */
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  color: white;
+  transition: opacity 0.5s ease;
+}
+
+.intro p {
+  margin: 20px;
+  text-justify: newspaper;
+}
+
+/* header {
+  background-color: blue;
+  height: 15%;
+} */
+
+nav li .seleccionado {
+  text-decoration: underline;
+}

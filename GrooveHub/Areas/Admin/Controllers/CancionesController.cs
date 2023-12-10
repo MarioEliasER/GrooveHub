@@ -2,6 +2,7 @@
 using GrooveHub.Areas.Admin.Models;
 using GrooveHub.Models.Entities;
 using GrooveHub.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Text.RegularExpressions;
 
 namespace GrooveHub.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class CancionesController : Controller
     {
@@ -29,7 +31,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             Repository = repository;
             Albumrepository = albumrepository;
         }
-
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Index()
         {
             AdminCancionesViewModel vm = new()
@@ -46,7 +48,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             };
             return View(vm);
         }
-
+        [Authorize(Roles = "Administrador")]
         public IActionResult Agregar()
         {
             AdminAgregarCancionViewModel vm = new();
@@ -59,6 +61,7 @@ namespace GrooveHub.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Agregar(AdminAgregarCancionViewModel vm)
         {
             ModelState.Clear();
@@ -98,7 +101,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             }
             return View(vm);
         }
-
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Editar(int id)
         {
             var cancion = Repository.Get(id);
@@ -120,6 +123,7 @@ namespace GrooveHub.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Editar(AdminAgregarCancionViewModel vm)
         {
             ModelState.Clear();
@@ -169,6 +173,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             return View(vm);
         }
 
+        [Authorize(Roles = "Administrador")]
         public IActionResult Eliminar(int id)
         {
             var cancion = Repository.Get(id);
@@ -180,6 +185,7 @@ namespace GrooveHub.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Eliminar(Cancion c)
         {
             var cancion = Repository.Get(c.Id);

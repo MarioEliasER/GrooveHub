@@ -1,10 +1,12 @@
 ﻿using FruitStore.Repositories;
 using GrooveHub.Areas.Admin.Models;
 using GrooveHub.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GrooveHub.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class AlbumesController : Controller
     {
@@ -15,6 +17,7 @@ namespace GrooveHub.Areas.Admin.Controllers
 
         public Repository<Album> Repository { get; }
 
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Index()
         {
             AdminAlbumesViewModel vm = new()
@@ -27,14 +30,14 @@ namespace GrooveHub.Areas.Admin.Controllers
             };
             return View(vm);
         }
-
+        [Authorize(Roles = "Administrador")]
         public IActionResult Agregar()
         {
 
             AdminAgregarAlbumViewModel vm = new();
             return View(vm);
         }
-
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public IActionResult Agregar(AdminAgregarAlbumViewModel vm)
         {
@@ -77,7 +80,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             }
             return View(vm);
         }
-
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Editar(int id)
         {
             var album = Repository.Get(id);
@@ -93,6 +96,7 @@ namespace GrooveHub.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Editar(AdminAgregarAlbumViewModel vm)
         {
             if (string.IsNullOrWhiteSpace(vm.Album.TituloAlbum))
@@ -137,7 +141,7 @@ namespace GrooveHub.Areas.Admin.Controllers
             }
             return View(vm);
         }
-
+        [Authorize(Roles = "Administrador")]
         public IActionResult Eliminar(int id)
         {
             var album = Repository.Get(id);
@@ -149,6 +153,7 @@ namespace GrooveHub.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Administrador")]
         public IActionResult Eliminar(Album a)
         {
             var album = Repository.Get(a.Id);

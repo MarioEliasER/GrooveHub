@@ -23,9 +23,12 @@
 <section class="listaC">
     <h1 id="titulo">Administrar Álbum</h1>
     <!-- <a><img src="add.png" /></a> -->
-    <a href="~/Admin/Albumes/Agregar">
-        <input id="btnAdd" type="button" value="Agregar Álbum" />
-    </a>
+    @if (User.IsInRole("Administrador"))
+    {
+        <a href="~/Admin/Albumes/Agregar">
+            <input id="btnAdd" type="button" value="Agregar Álbum" />
+        </a>
+    }
     <ul>
         @foreach (var album in Model.Albumes)
         {
@@ -35,7 +38,10 @@
                     <label>Titulo: @album.NombreAlbum</label>
                     <div>
                         <a href="~/Admin/Albumes/Editar/@album.Id"><img src="~/AdminVistas/editb.png" /></a>
-                        <a href="~/Admin/Albumes/Eliminar/@album.Id"><img src="~/AdminVistas/deleteb.png" /></a>
+                        @if (User.IsInRole("Administrador"))
+                        {
+                            <a href="~/Admin/Albumes/Eliminar/@album.Id"><img src="~/AdminVistas/deleteb.png" /></a>
+                        }
                     </div>
                 </section>
             </li>

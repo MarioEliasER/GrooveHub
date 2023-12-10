@@ -23,9 +23,12 @@
 <section class="listaC">
     <h1 id="titulo">Administrar Canciones</h1>
     <!-- <a><img src="add.png" /></a> -->
-    <a href="~/Admin/Canciones/Agregar">
-        <input id="btnAdd" type="button" value="Agregar Cancion" />
-    </a>
+    @if (User.IsInRole("Administrador"))
+    {
+        <a href="~/Admin/Canciones/Agregar">
+            <input id="btnAdd" type="button" value="Agregar Cancion" />
+        </a>
+    }
     <ul>
         @foreach (var c in Model.Canciones)
         {
@@ -38,7 +41,10 @@
                     <label>Duración: @c.Duracion.ToString("mm\\:ss")</label>
                     <div>
                         <a href="~/Admin/Canciones/Editar/@c.Id"><img src="~/AdminVistas/editb.png" /></a>
-                        <a href="~/Admin/Canciones/Eliminar/@c.Id"><img src="~/AdminVistas/deleteb.png" /></a>
+                        @if (User.IsInRole("Administrador"))
+                        {
+                            <a href="~/Admin/Canciones/Eliminar/@c.Id"><img src="~/AdminVistas/deleteb.png" /></a>
+                        }
                     </div>
                    
                 </section>

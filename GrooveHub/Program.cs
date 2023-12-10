@@ -12,7 +12,7 @@ builder.Services.AddTransient<CancionesRepository>();
 
 builder.Services.AddDbContext<GroovehubContext>
 (
-    x => x.UseMySql("server=localhost;password=root;user=root;database=groovehub", 
+    x => x.UseMySql("server=websitos256.com;password=0&f42sO2e;user=websitos_groovehub;database=websitos_groovehub", 
     Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.29-mysql"))
 );
 

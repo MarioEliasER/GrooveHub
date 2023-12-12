@@ -413,7 +413,7 @@ nav ul li a:hover {
 
 .cancionADMIN {
   background-color: #3a4d39;
-  padding: 10px;
+  padding: 3px;
   margin: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -460,7 +460,7 @@ nav ul li a:hover {
 
 .eliminarcancion {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .eliminarcancion button {
@@ -625,6 +625,7 @@ nav li .seleccionado {
   height: 100vh;
   margin: 20px;
   text-align: center;
+  row-gap: 30px;
 }
 
 .column {
@@ -642,7 +643,7 @@ nav li .seleccionado {
 }
 
 .AL {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -650,7 +651,17 @@ nav li .seleccionado {
   width: 100%;
   height: 100%;
   border: 1px solid white;
+  border-radius: 5px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 300px;
+  border: 1px solid white;
   border-radius: 5px;
+  color: white;
 }
 
 .AL label {
@@ -674,7 +685,7 @@ nav li .seleccionado {
   padding-top: 10px;
 }
 
-.row .column:hover {
+.AL:hover {
   background-color: #acbea3;
 }
 
@@ -711,7 +722,7 @@ nav li .seleccionado {
   justify-content: center;
   vertical-align: middle;
   width: 100%;
-  height: 100%;
+  height: 300px;
   border: 1px solid white;
   border-radius: 5px;
   color: white;
@@ -719,11 +730,10 @@ nav li .seleccionado {
 
 .LA label {
   font-weight: bold;
-  font-size: ;
 }
 
 .LA .botonesADDMIN {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .botonesADDMIN span {
@@ -741,6 +751,7 @@ nav li .seleccionado {
   height: 100vh;
   margin: 20px;
   text-align: center;
+  row-gap: 30px;
 }
 
 .c {
@@ -767,7 +778,12 @@ nav li .seleccionado {
   filter: drop-shadow(10px, 10px, 10px, 10px black);
 }
 
-.c:hover {
+#imgAlb {
+  width: 180px;
+  height: 180px;
+}
+
+.LA:hover {
   background-color: #826754;
 }
 
@@ -813,34 +829,34 @@ nav li .seleccionado {
   border-radius: 5px;
 }
 
-    .inputg select {
-        width: 600px;
-        height: 40px;
-        font-size: 16px;
-        color: black;
-        padding: 0 10px;
-        background: transparent;
-        border: 1.2px solid #fff;
-        outline: none;
-        border-radius: 5px;
-    }
-
 
 #albumE {
-    transform: translateY(-70%);
+    transform: translateY(-180%);
+    background: #826754;
 }
 
-    .inputg input:focus ~ label,
-    .inputg input:valid ~ label {
-        top: 0;
-        font-size: 17px;
+
+.inputg select {
+    width: 600px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;
+    background: transparent;
+    border: 1.2px solid #fff;
+    outline: none;
+    border-radius: 5px;
+}
+
+    .inputg select option {
         background: #826754;
     }
-.inputg select:focus ~ label,
-.inputg select:valid ~ label {
-    top: 0;
-    font-size: 17px;
-    background: #826754;
+
+.inputg input:focus ~ label,
+.inputg input:valid ~ label {
+  top: 0;
+  font-size: 17px;
+  background: #826754;
 }
 
 .btns input {
@@ -878,19 +894,14 @@ nav li .seleccionado {
   z-index: 999; /* Asegura que esté por encima del contenido */
 }
 
-#imagePreview{
-    width:70px;
-    height: 70px;
+#FORMBIO {
+  background-color: #826754;
 }
 
-#bienvenida{
-    text-align:center;
-    color:white;
-    font-size:30px;
-    padding-top: 25px;
-    font-weight: bold;
+#FORMIO textarea {
+  resize: none;
 }
 
-#logout{
-  text-align:center;
+#FORMBIO .botones input {
+  background-color: #6d8b74;
 }

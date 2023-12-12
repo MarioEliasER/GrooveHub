@@ -10,12 +10,15 @@ namespace GrooveHub.Areas.Admin.Controllers
     [Area("Admin")]
     public class AlbumesController : Controller
     {
-        public AlbumesController(Repository<Album> repository)
+        public AlbumesController(Repository<Album> repository,AlbumRepository repo)
         {
             Repository = repository;
+            Repo = repo;
         }
 
         public Repository<Album> Repository { get; }
+
+        private AlbumRepository Repo;
 
         //[Authorize(Roles = "Supervisor, Administrador")]
         public IActionResult Index()
@@ -156,17 +159,32 @@ namespace GrooveHub.Areas.Admin.Controllers
         //[Authorize(Roles = "Administrador")]
         public IActionResult Eliminar(Album a)
         {
-            var album = Repository.Get(a.Id);
+
+            ModelState.Clear();
+
+            //var album = Repository.Get(a.Id);
+            var album = Repo.GetAlbum(a.Id);
             if (album == null)
             {
                 return RedirectToAction("Index");
             }
-            Repository.Delete(album);
-            var ruta = $"wwwroot/albumes/{a.Id}";
-            if (System.IO.File.Exists(ruta))
+
+            if(album.Cancion.Count != 0)
             {
-                System.IO.File.Delete(ruta);
+                ModelState.AddModelError("", "El album no se puede eliminar ya que tiene canciones asociadas a el.");
             }
+
+            if (ModelState.IsValid)
+            {
+                Repository.Delete(album);
+                var ruta = $"wwwroot/albumes/{a.Id}";
+                if (System.IO.File.Exists(ruta))
+                {
+                    System.IO.File.Delete(ruta);
+                }
+            }
+
+            
             return RedirectToAction("Index");
         }
     }

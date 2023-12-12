@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<Repository<Album>>();
 builder.Services.AddTransient<Repository<Cancion>>();
 builder.Services.AddTransient<CancionesRepository>();
+builder.Services.AddTransient<AlbumRepository>();   
 builder.Services.AddTransient<Repository<Usuario>>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
     x =>

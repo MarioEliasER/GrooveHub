@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<form action="">
+@*<form action="">
     <h1>Shakira(Isabel Mebarak Ripoll)</h1>
     <textarea>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
@@ -25,8 +25,18 @@
           varius porttitor ante, quis suscipit leo volutpat at.
         </textarea>
     <div class="B">
-    <p id="E">No</p>
+    <p id="E">@Html.ValidationSummary(true)</p>
     <input type="button" value="Guardar" id="btnEditar" />
     <input type="button" value="Cancelar" id="btnCancelar" />
     </div>
-</form>
+</form>*@
+
+<section class="BioADMIN">
+    <form action="" id="FORMBIO">
+        <textarea></textarea>
+        <div class="botones">
+            <a href="#"><input type="submit" value="Editar" /></a>
+            <a href="#"><input type="submit" value="Cancelar" /></a>
+        </div>
+    </form>
+</section>

@@ -9,7 +9,7 @@ public partial class Cancion
 
     public string Nombre { get; set; } = null!;
 
-    public DateTime AñoLanzamiento { get; set; } 
+    public DateTime AñoLanzamiento { get; set; }  = DateTime.Now;
 
     public TimeOnly Duracion { get; set; }
 

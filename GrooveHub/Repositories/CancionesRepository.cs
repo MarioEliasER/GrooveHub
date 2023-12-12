@@ -22,6 +22,22 @@ namespace GrooveHub.Repositories
             return Context.Cancion
                 .Include(x => x.IdAlbumNavigation).OrderBy(x => x.Nombre);
         }
+
+
     }
 
+
+    public class AlbumRepository : Repository<Album>
+    {
+        public AlbumRepository(GroovehubContext context) : base(context)
+        {
+            
+        }
+
+        public Album? GetAlbum(int id)
+        {
+            return Context.Album
+                .Include(x => x.Cancion).FirstOrDefault(x => x.Id == id);
+        }
+    }
 }

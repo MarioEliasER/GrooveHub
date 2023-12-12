@@ -17,12 +17,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="wwwroot\canciones\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\AdminVistas\BiografiaAdmin.css" />
-    <None Include="wwwroot\AdminVistas\EditarBiografia.html" />
   </ItemGroup>
 
 </Project>

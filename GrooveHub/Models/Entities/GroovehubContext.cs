@@ -58,7 +58,7 @@ public partial class GroovehubContext : DbContext
             entity.HasIndex(e => e.IdAlbum, "cancion_album_idx");
 
             entity.Property(e => e.AñoLanzamiento).HasColumnType("datetime");
-            entity.Property(e => e.Duracion).HasColumnType("time");
+            entity.Property(e => e.Duracion).HasConversion(v => v.ToTimeSpan(), v => new TimeOnly(v.Ticks));
             entity.Property(e => e.Nombre).HasMaxLength(45);
 
             entity.HasOne(d => d.IdAlbumNavigation).WithMany(p => p.Cancion)

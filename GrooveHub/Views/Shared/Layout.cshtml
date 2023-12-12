@@ -14,8 +14,7 @@
           rel="stylesheet" />
 </head>
 <body>
-    <section class="fondo">
-        <header>
+       @* <header>
             <nav>
                 <a href="~/Home/Index" id="logo"><label>GrooveHub</label></a>
                 <div>
@@ -32,12 +31,31 @@
                     </ul>
                 </div>
             </nav>
-        </header>
+        </header>*@
+    <header>
+        <div class="nave">
+            <nav>
+                <a href="/Inicio.html" id="logo"><label>GrooveHub</label></a>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="~/Home/Index">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Biografia" class="seleccionado">Biografia</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Discografia">Discografia</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
         <main>
         @RenderBody()
         </main>
-    </section>
     <footer></footer>
 </body>
 </html>

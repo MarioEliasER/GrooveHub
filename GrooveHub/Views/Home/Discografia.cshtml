@@ -3,7 +3,7 @@
     ViewData["Title"] = "Discografia";
     Layout = "~/Views/Shared/Layout.cshtml";    
 }
-<section class="disc">
+@*<section class="disc">
     <div class="fila">
             @foreach (var album in Model.Albumes)
             {
@@ -23,4 +23,22 @@
                 </div>
             }
     </div>
+</section>*@
+<section class="disc">
+    <span>Albumes</span>
 </section>
+<div class="listAlbums">
+    <div class="row">
+        @foreach (var album in Model.Albumes)
+        {
+            <div class="column">
+                <section class="AL">
+                    <img id="imgAlb" src="~/albumes/@(album.Id).jpg" alt="" />
+                    <label for="/Saul">@album.Titulo</label>
+                    <span id="btn"><a href="~/Home/Album/@album.Titulo.Replace(" ", "-")">Ver canciones</a></span>
+                </section>
+            </div>
+        }
+        
+    </div>
+</div>

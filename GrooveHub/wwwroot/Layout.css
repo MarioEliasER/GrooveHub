@@ -18,7 +18,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(Imagenes/leslie-del-moral-KQEubGnJwM0-unsplash.jpg);
+    url('AdminVistas/leslie-del-moral-KQEubGnJwM0-unsplash.jpg');
 
   position: relative;
 }
@@ -82,6 +82,7 @@ nav ul li a:hover {
 .intro p {
   margin: 20px;
   text-justify: newspaper;
+  font-size:18px;
 }
 
 /* header {

@@ -174,7 +174,7 @@ nav ul li a:hover {
 .botonesAlbum span input {
   height: 30px;
   margin: 0;
-  background-color: #0b2447;
+  background-color: #1b4242;
   border: 0;
   font-size: 18px;
   vertical-align: middle;
@@ -216,7 +216,7 @@ nav ul li a:hover {
 }
 
 .cancion {
-  background-color: #0e356b;
+  background-color: #3a4d39;
   padding: 20px;
   margin: 20px;
   display: grid;
@@ -242,11 +242,12 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-.cancion:hover {
-  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
-  transform: scale(1) translateY(-20px);
-  background-color: #12458a;
-}
+    .cancion:hover {
+        box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+        transform: scale(1) translateY(-20px);
+        background-color: #4f6f52;
+        transition: all 1s;
+    }
 
 .cancion:hover label {
   font-size: 30px;
@@ -309,7 +310,7 @@ nav ul li a:hover {
 }
 
 .agregarAlbum a:hover {
-  box-shadow: 15px 15px 18px 10px black;
+  box-shadow: 2px 10px 5px 5px black;
 }
 
 .disc {
@@ -379,6 +380,7 @@ nav ul li a:hover {
 #ERROR {
   color: red;
   font-weight: bold;
+  margin: 0;
 }
 
 /* ESTILOS ELIMINAR ALBUM */
@@ -397,8 +399,14 @@ nav ul li a:hover {
 
 /* ESTILOS CANCIONES ADMIN */
 .CancionesADMIN {
-  background-color: yellow;
-  width: 100%;
+  background-color: #6d8b74;
+  width: 95%;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  font-weight: bolder;
+  font-size: 23px;
+  border-radius: 4px;
 }
 
 .cancionADMIN {
@@ -410,6 +418,11 @@ nav ul li a:hover {
   border-radius: 5px;
   align-items: center;
 }
+
+    .cancionADMIN:hover {
+        background-color: #6d8b74;
+        transition: all 1s;
+    }
 
 .cancionADMIN img {
   width: 70px;
@@ -428,6 +441,262 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+/* .eliminarcancion input {
+  position: absolute;
+  opacity: 0;
+}
+
+.eliminarcancion i {
+  font-size: 25px;
+  color: white;
+  padding-left: 15px;
+}
+
+.eliminarcancion #editar {
+  margin-left: 40px;
+} */
+
+.eliminarcancion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eliminarcancion button {
+  background-color: transparent;
+  border: 0;
+}
+
+.eliminarcancion i {
+  font-size: 27px;
+  color: white;
+}
+
+/* ESTILO SELECCIONADO */
 nav li .seleccionado {
   text-decoration: underline;
+}
+
+/* ESTILOS FORM CANCIONES */
+.ADDCANCIONADMIN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 80vh;
+}
+
+#FORMADDCANCION {
+  background-color: #19376d;
+  padding: 0;
+  /* transform: translateY(-5%); */
+  width: 60%;
+  border-radius: 4px;
+}
+
+#campAddCancion {
+  margin: 15px;
+}
+
+.botonesADD {
+  /* background-color: aqua;
+  padding-top: 15px;
+  justify-content: center;
+  text-align: center; */
+  height: 70%;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.botonesADD input {
+  color: white;
+  background-color: #4f6f52;
+  padding: 10px;
+  padding-inline: 25px;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  width: auto;
+}
+
+.InputB {
+  margin-bottom: 18px;
+}
+
+.InputB input {
+  width: 100%;
+  font-size: 20px;
+}
+
+.InputB select {
+  width: 100%;
+  font-size: 20px;
+}
+
+.InputB span {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ESTILOS LOG IN */
+.LogIn {
+  background-color: whitesmoke;
+  width: 90%;
+  display: flex;
+  height: 80vh;
+  margin: auto;
+  border-radius: 10px;
+  vertical-align: middle;
+  transform: translateY(10%);
+}
+
+.LogImg {
+  width: 45%;
+}
+
+.LogImg img {
+  width: 100%;
+  height: 100%;
+  /* background-size: cover; */
+  border-radius: 10px;
+}
+
+.LogDatos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 80vh;
+  width: 45%;
+  margin: auto;
+  background-color: #dfdfde;
+  border-radius: 25px;
+}
+
+#FORMLOGIN input {
+  font-size: 17px;
+}
+
+#FORMLOGIN {
+  width: 100%;
+}
+
+#FORMLOGIN span {
+  color: black;
+}
+
+.data {
+  margin: 20px;
+}
+
+#sitio {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+/* .ADDCANCIONADMIN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 80vh;
+} */
+
+/* ESTILOS NUEVOOOSS */
+
+.disc span {
+  margin: auto;
+  font-size: 45px;
+  color: white;
+  font-weight: bolder;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  margin: 20px;
+  text-align: center;
+}
+
+.column {
+  width: 93%;
+  height: 68%;
+  justify-content: space-between;
+  margin: 0;
+  margin: auto;
+  padding: 0;
+}
+
+.column:hover {
+  transform: translateY(-15px);
+  transition: all 1s;
+}
+
+.AL {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.AL label {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.AL span {
+  visibility: hidden;
+}
+
+.AL span a {
+  padding-top: 10px;
+}
+
+#imgAlb {
+  width: 240px;
+  height: 240px;
+  padding-top: 10px;
+}
+
+.row .column:hover {
+  background-color: #acbea3;
+}
+
+.row .column:hover .AL span {
+  background-color: #826754;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.AL span a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  visibility: hidden;
+}
+
+.row .column:hover .AL span {
+  visibility: visible;
+}
+
+.row .column:hover .AL span a {
+  visibility: visible;
+}
+
+#btn:hover {
+  filter: drop-shadow(5px 5px 5px black);
 }

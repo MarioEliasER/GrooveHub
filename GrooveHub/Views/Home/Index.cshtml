@@ -1,25 +1,53 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/Layout.cshtml";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="~/Layout.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&family=DM+Sans:opsz,wght@9..40,200&family=Lora:wght@400;500;700&family=Open+Sans:wght@700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
+</head>
+<body>
+    <section class="fondo">
+        <header>
+            <nav>
+                <a href="#" id="logo"><label>GrooveHub</label></a>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="/Inicio.html" class="seleccionado">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Biografia">Biografia</a>
+                        </li>
+                        <li>
+                            <a href="~/Home/Discografia">Discografia</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-<div class="intro">
-    <h1>Shakira Isabel Mebarak Ripoll</h1>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
-        massa nec tellus auctor consectetur. Sed blandit feugiat mollis.
-        Curabitur accumsan interdum iaculis. Maecenas id dui in nibh
-        hendrerit lobortis. Phasellus eget neque pellentesque, mollis tellus
-        vel, fringilla nibh. Vestibulum vestibulum odio ac dui bibendum, sit
-        amet vestibulum arcu lobortis. Quisque fermentum, enim non pretium
-        commodo, lacus est semper nulla, et sagittis ipsum lectus vitae sem.
-        Donec eu urna maximus, faucibus tellus id, dignissim mi. Sed pretium
-        orci at sollicitudin suscipit. Vivamus commodo orci ut quam
-        elementum, id dapibus est imperdiet. Vestibulum pharetra tincidunt
-        purus, a consequat libero laoreet et. Vivamus eu posuere leo.
-        Curabitur interdum elit quis justo porta, aliquam eleifend ante
-        venenatis. Quisque dapibus porta tempus. Donec in nisl vestibulum,
-        semper diam eu, elementum dolor.
-    </p>
-</div>
+        <main>
+            <div class="intro">
+                <h1>Shakira Isabel Mebarak Ripoll</h1>
+                <p>
+                    La cantautora colombiana, ha dejado una marca indeleble en la música global con su estilo distintivo y su versatilidad artística. 
+                    Su ascenso meteórico en la escena musical comenzó con fusiones únicas de pop, rock y sonidos latinos, capturando la atención
+                    internacional con álbumes en español que resonaron con audiencias de diferentes culturas.
+                    Entre sus logros se encuentran múltiples Grammy Awards, MTV Video Music Awards, Premios Billboard y Grammy Latino, 
+                    reconocimientos que destacan su versatilidad musical y su impacto en la escena internacional. Su talento indiscutible y su influencia
+                    en la cultura pop la
+                    han convertido en una de las artistas más galardonadas y respetadas en la industria musical.
+                </p>
+            </div>
+        </main>
+    </section>
+    <footer></footer>
+</body>
+</html>

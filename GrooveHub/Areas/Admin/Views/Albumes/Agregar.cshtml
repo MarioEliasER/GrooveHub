@@ -28,7 +28,7 @@
         <label for="">Titulo del album</label>
     </div>
     <div class="inputg">
-        <input type="datetime" asp-for="Album.FechaLanzamiento" />
+        <input type="text" pattern="\d{4}" placeholder="Ej. 2010" asp-for="Album.FechaLanzamiento" />
         <label for="">Año de lanzamiento</label>
     </div>
     <div class="inputg">

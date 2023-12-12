@@ -43,11 +43,11 @@
         <label for="">Titulo de la cancion</label>
     </div>
     <div class="inputg">
-        <input type="text" asp-for="Cancion.AñoLanzamiento" />
+        <input type="text" asp-for="Cancion.AñoLanzamiento"  />
         <label for="">Año de lanzamiento</label>
     </div>
     <div class="inputg">
-        <input type="text" asp-for="Cancion.Duracion" step="60" />
+        <input type="text" asp-for="Cancion.Duracion" step="1" pattern="[0-5][0-9]:[0-5][0-9]" value="00:00"/>
         <label for="">Duracion</label>
     </div>
    @* <div class="inputg">
@@ -63,6 +63,6 @@
     <div class="btns">
         <input type="submit" value="Agregar" />
         <a href="~/Admin/Canciones/"><input type="button" value="Cancelar" /></a>
-        <p id="ERROR">Error</p>
+        <p id="ERROR">@Html.ValidationSummary(true)</p>
     </div>
 </form>

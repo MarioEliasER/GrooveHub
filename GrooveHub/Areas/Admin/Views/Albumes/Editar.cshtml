@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<form method="post" action="~/Admin/Albumes/Editar" enctype="multipart/form-data">
+@*<form method="post" action="~/Admin/Albumes/Editar" enctype="multipart/form-data">
     <h1>Editar Álbum</h1>
     <div>
         <input type="hidden" asp-for="Album.Id" />
@@ -27,6 +27,28 @@
         <p id="Error">@Html.ValidationSummary(true)</p>
         <input type="submit" value="Editar" id="btnAgregar" />
         <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
+    </div>
+</form>*@
+<form class="formu" method="post" action="~/Admin/Albumes/Editar" enctype="multipart/form-data">
+    <div class="inputg">
+        <input type="text" asp-for="Album.TituloAlbum" />
+        <label for="">Titulo del album</label>
+    </div>
+    <div class="inputg">
+        <input type="datetime" min="0" asp-for="Album.FechaLanzamiento" />
+        <label for="">Año de lanzamiento</label>
+    </div>
+    <div class="inputg">
+        <img id="imagePreview" src="~/albumes/@(Model.Album.Id).jpg" />
+        <input type="file" id="txtfile" asp-for="AlbumFile" accept="image/jpg" />
+        
+        <label for="">Portada del album</label>
+    </div>
+
+    <div class="btns">
+        <input type="submit" value="Editar" />
+        <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" /></a>
+        <p id="ERROR">@Html.ValidationSummary(true)</p>
     </div>
 </form>
 <script>

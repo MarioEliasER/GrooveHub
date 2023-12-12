@@ -4,7 +4,7 @@
     ViewData["Title"] = "Eliminar";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
-<form method="post" action="~/Admin/Albumes/Eliminar" enctype="multipart/form-data">
+@*<form method="post" action="~/Admin/Albumes/Eliminar" enctype="multipart/form-data">
     <h1>Eliminar Álbum</h1>
     <div>
         <h1>¿Estás seguro de eliminar el siguiente album?</h1>
@@ -17,5 +17,16 @@
         <p id="Error">@Html.ValidationSummary(true)</p>
         <input type="submit" value="Eliminar" id="btnAgregar" />
         <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" id="btnCancelar" /></a>
+    </div>
+</form>*@
+<form class="formu" method="post" action="~/Admin/Albumes/Eliminar" enctype="multipart/form-data">
+    <div class="inputt">
+        <label for="">Desea eliminar la cancion "@Model.TituloAlbum"?</label>
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="btns">
+        <input type="submit" value="Eliminar" />
+        <a href="~/Admin/Albumes/"><input type="button" value="Cancelar" /></a>
+        <p id="ERROR">@Html.ValidationSummary(true)</p>
     </div>
 </form>

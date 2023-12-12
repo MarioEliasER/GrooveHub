@@ -20,9 +20,15 @@
         }
     </ul>
 </div>*@
-<section class="listaC">
+
+
+
+
+
+
+
+@*<section class="listaC">
     <h1 id="titulo">Administrar Álbum</h1>
-    <!-- <a><img src="add.png" /></a> -->
     @if (User.IsInRole("Administrador"))
     {
         <a href="~/Admin/Albumes/Agregar">
@@ -47,4 +53,30 @@
             </li>
         }
     </ul>
+</section>*@
+
+
+
+<section class="ALBUMADM">
+    <div class="listaAlbums">
+        <div class="r">
+
+            @foreach (var album in Model.Albumes)
+            {
+                <div class="c">
+                    <section class="LA">
+                        <div class="botonesADDMIN">
+                            <span><a href="~/Admin/Albumes/Eliminar/@album.Id"><i class="fas fa-trash"></i></a></span>
+                            <span><a href="~/Admin/Albumes/Editar/@album.Id"><i class="fas fa-edit"></i></a></span>
+                        </div>
+                        <img id="imgAlb" src="~/albumes/@(album.Id).jpg" alt="@album.NombreAlbum" />
+                        <label>@album.NombreAlbum</label>
+                    </section>
+                </div>
+            }
+
+        </div>
+    </div>
 </section>
+<a href="~/Admin/Albumes/Agregar" class="botonFlotante"><i class="fas fa-plus"></i></a>
+

@@ -242,12 +242,12 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-    .cancion:hover {
-        box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
-        transform: scale(1) translateY(-20px);
-        background-color: #4f6f52;
-        transition: all 1s;
-    }
+.cancion:hover {
+  box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+  transform: scale(1) translateY(-20px);
+  background-color: #4f6f52;
+  transition: all 1s;
+}
 
 .cancion:hover label {
   font-size: 30px;
@@ -381,6 +381,8 @@ nav ul li a:hover {
   color: red;
   font-weight: bold;
   margin: 0;
+  text-align: center;
+  opacity: 0.8;
 }
 
 /* ESTILOS ELIMINAR ALBUM */
@@ -419,10 +421,10 @@ nav ul li a:hover {
   align-items: center;
 }
 
-    .cancionADMIN:hover {
-        background-color: #6d8b74;
-        transition: all 1s;
-    }
+.cancionADMIN:hover {
+  background-color: #6d8b74;
+  transition: all 1s;
+}
 
 .cancionADMIN img {
   width: 70px;
@@ -699,4 +701,196 @@ nav li .seleccionado {
 
 #btn:hover {
   filter: drop-shadow(5px 5px 5px black);
+}
+
+/* ESTILOS INDEX ALBUM ADMIN */
+.LA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+}
+
+.LA label {
+  font-weight: bold;
+  font-size: ;
+}
+
+.LA .botonesADDMIN {
+  padding-bottom: 20px;
+}
+
+.botonesADDMIN span {
+  margin: 10px;
+}
+
+.botonesADDMIN i {
+  font-size: 24px;
+  color: white;
+}
+
+.r {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  margin: 20px;
+  text-align: center;
+}
+
+.c {
+  width: 93%;
+  height: 68%;
+  justify-content: space-between;
+  margin: 0;
+  margin: auto;
+  padding: 0;
+}
+
+.LA label {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.LA i:hover {
+  transform: translateY(-5px);
+}
+
+.LA i:hover span {
+  filter: drop-shadow(10px, 10px, 10px, 10px black);
+}
+
+.c:hover {
+  background-color: #826754;
+}
+
+.formu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #826754;
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+  padding-bottom: 15px;
+}
+
+.inputg {
+  position: relative;
+  margin: 20px 0;
+}
+
+.inputg label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-70%);
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputg input {
+  width: 580px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 10px;
+  background: transparent;
+  border: 1.2px solid #fff;
+  outline: none;
+  border-radius: 5px;
+}
+
+    .inputg select {
+        width: 600px;
+        height: 40px;
+        font-size: 16px;
+        color: black;
+        padding: 0 10px;
+        background: transparent;
+        border: 1.2px solid #fff;
+        outline: none;
+        border-radius: 5px;
+    }
+
+
+#albumE {
+    transform: translateY(-70%);
+}
+
+    .inputg input:focus ~ label,
+    .inputg input:valid ~ label {
+        top: 0;
+        font-size: 17px;
+        background: #826754;
+    }
+.inputg select:focus ~ label,
+.inputg select:valid ~ label {
+    top: 0;
+    font-size: 17px;
+    background: #826754;
+}
+
+.btns input {
+  background-color: #40476d;
+  border: 0;
+  color: white;
+  padding: 8px;
+  padding-inline: 13px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.inputt {
+  width: 580px;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Estilos para el botón flotante */
+.botonFlotante {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+  right: 20px; /* Ajusta la distancia desde la parte derecha */
+  background-color: #826754; /* Cambia el color a tu preferencia */
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+  z-index: 999; /* Asegura que esté por encima del contenido */
+}
+
+#imagePreview{
+    width:70px;
+    height: 70px;
+}
+
+#bienvenida{
+    text-align:center;
+    color:white;
+    font-size:30px;
+    padding-top: 25px;
+    font-weight: bold;
+}
+
+#logout{
+  text-align:center;
 }

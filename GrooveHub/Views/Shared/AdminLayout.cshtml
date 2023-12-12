@@ -1,32 +1,41 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Index</title>
-    <link rel="stylesheet" href="~/AdminVistas/PrincipalEstilo.css" />
-    <link rel="stylesheet" href="~/AdminVistas/BiografiaAdmin.css" />
-    <link rel="stylesheet" href="~/AdminVistas/cancionesAdmin.css" />
-    <link rel="stylesheet" href="~/AdminVistas//ListaCancionesAdmin.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="~/Estilos2.css" />
+    <link href="~/https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300&family=DM+Sans:opsz,wght@9..40,200&family=Lora:wght@400;500;700&family=Open+Sans:wght@700&family=Rubik:wght@400;500;600;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet"
+          href="~//use.fontawesome.com/releases/v5.0.7/css/all.css" />
 </head>
 <body>
     <header>
-        <nav>
-            <section class="logo">
-                <a href="~/images/compact-disc-with-glare.png">GrooveHub</a>
-            </section>
-            <nav class="menu">
-                <ul>
-                    <li><a href="~/Admin/" class="inicio">Inicio</a></li>
-                    <li><a href="~/Admin/Albumes/">Lista de Álbum</a></li>
-                    <li><a href="~/Admin/Canciones/">Lista de Canción</a></li>
-                    <li><a href="~/Admin/Biografia">Biografía</a></li>
-                </ul>
+        <div class="nave">
+            <nav>
+                <a href="#" id="logo"><label>GrooveHub</label></a>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="/BiografiaADMIN.HTML">Editar biografia</a>
+                        </li>
+                        <li>
+                            <a href="~/Admin/Albumes/" class="seleccionado">Gestionar Albumes</a>
+                        </li>
+                        <li>
+                            <a href="~/Admin/Canciones/">Gestionar Canciones</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-        </nav>
+        </div>
     </header>
     <main>
         @RenderBody()
     </main>
-</body>
-</html>
+    </body>
+    </html>

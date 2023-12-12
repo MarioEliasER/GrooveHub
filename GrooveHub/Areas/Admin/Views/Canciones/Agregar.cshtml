@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/AdminLayout.cshtml";
 }
 
-<form method="post" action="~/Admin/Canciones/Agregar">
+@*<form method="post" action="~/Admin/Canciones/Agregar">
     <h1>Agregar Canción</h1>
 
     <div class="cont">
@@ -34,5 +34,35 @@
         <a href="~/Admin/Canciones/">
             <input type="button" value="Cancelar" id="btnCancelar" />
         </a>
+    </div>
+</form>*@
+
+<form class="formu" method="post" action="~/Admin/Canciones/Agregar">
+    <div class="inputg">
+        <input type="text" asp-for="Cancion.Nombre" />
+        <label for="">Titulo de la cancion</label>
+    </div>
+    <div class="inputg">
+        <input type="text" asp-for="Cancion.AñoLanzamiento" />
+        <label for="">Año de lanzamiento</label>
+    </div>
+    <div class="inputg">
+        <input type="text" asp-for="Cancion.Duracion" step="60" />
+        <label for="">Duracion</label>
+    </div>
+   @* <div class="inputg">
+        <input type="file" id="txtfile" />
+        <label for="">Portada del album</label>
+    </div>*@
+    <div class="inputg">
+         <select asp-for="Cancion.IdAlbum" asp-items="@(new SelectList(Model.Albumes, "Id", "NombreAlbum"))"></select>
+            <label id="albumE">Albúm:</label>
+    </div>
+
+
+    <div class="btns">
+        <input type="submit" value="Agregar" />
+        <a href="~/Admin/Canciones/"><input type="button" value="Cancelar" /></a>
+        <p id="ERROR">Error</p>
     </div>
 </form>
